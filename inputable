@@ -1,0 +1,14 @@
+// an abstract class used to overload >> operator 
+
+#ifndef INPUTABLE
+#define INPUTABLE
+class Inputable{
+public:
+    virtual void __cin__(std::istream &istr)=0;
+  
+    friend std::istream& operator>>(std::istream& istr,Inputable &inputable){
+	      inputable.__cin__(ostr);
+        return istr;
+    }
+};
+#endif // INPUTABLE
