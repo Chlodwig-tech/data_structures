@@ -1,3 +1,5 @@
+// an abstract class used to overload << operator 
+
 #ifndef PRINTABLE
 #define PRINTABLE
 class Printable{
