@@ -1,6 +1,7 @@
 #ifndef LIST_H
 #define LIST_H
 
+#include<fstream>
 
 #include "../printable.h"
 #include "List_element.cpp"
@@ -35,6 +36,8 @@ public:
     int get_size();
     bool is_empty();
     List_element<T>* get_first();
+    void save(std::string path=".dtype_list_file.xml");
+    void read(std::string path=".dtype_list_file.xml");
 
     //Operators
     List_element<T>* operator()(int i);
