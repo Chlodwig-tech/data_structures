@@ -1,6 +1,8 @@
 #ifndef DTYPE_LIST_H
 #define DTYPE_LIST_H
 
+#include<fstream>
+
 #include "../printable.h"
 #include "dtype_element.h"
 
@@ -84,6 +86,8 @@ public:
     bool is_empty();
     dtype_super_element* get_first();
     template<typename T> T get(int index);
+    void save(std::string path=".dtype_list_file.xml");
+    void read(std::string path=".dtype_list_file.xml");
     
     // Operators
     dtype_super_element* operator()(int i);
